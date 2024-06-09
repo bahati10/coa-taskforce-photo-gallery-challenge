@@ -1,13 +1,27 @@
 body {
+    margin: 0;
+    padding: 0;
     background: #000;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+a{
+    text-decoration: none;
+    color: rgb(3, 192, 225);
 
-.container{
+}
+
+.gallery{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     width:  1,178px;
-    height: 595px;
+    height: 588px;
     top: 608px;
     left: -355px;
     gap: 2px;
@@ -15,14 +29,25 @@ body {
     overflow: hidden;
 }
 
-.flex-item{
+.card-item{
+    display: flex;
+    justify-content: center;
     width: 293px;
     height: 588px;
     gap: 0px;
     opacity: 0px;
     position: relative;
     background: white;
+    overflow: hidden;
+    transition: transform .5s ease;
+
 }
+
+.card-item img{
+    transition: transform .3s ease, filter .5s;
+}
+
+/*  */
 
 .information {
     content: '';
@@ -31,11 +56,11 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
     z-index: 1;
 }
 
-.flex-item-image{
+.card-item-image{
     width: 397px;
     height: 588px;
     top: -3px;
@@ -53,11 +78,12 @@ body {
 
 .information-text{
     position: absolute;
-    top: 394px;
-    width: Fill (213px)px;
+    top: 404px;
+    width: 213px;
     height: Hug (100px)px;
     gap: 8px;
     opacity: 0px;
+    z-index: 3;
 }
 
 .information-text .species-names{
@@ -67,19 +93,37 @@ body {
     line-height: 38px;
     text-align: left;
     color: #FFFFFF;
+    display: flex;
+    height: 65px;
+    transition: transform 0.5s ease;
 }
 
-.information-text .species-country{
+.information-text .species-place{
     font-family: Poppins;
     font-size: 12px;
     font-weight: 400;
     line-height: 16.02px;
     text-align: left;
     color: #FFFFFF;
+    opacity: 0.7;
     width: 213px;
     height: 16px;
     gap: 0px;
-    opacity: 70%;   
-    border: 2px solid green;
     margin-top: -20px; 
+    transition: transform 0.5s ease;
+}
+
+.know-more{
+    font-family: Poppins;
+    font-size: 14px;
+    color: rgb(3, 192, 225);
+    font-weight: 400;
+    margin-top: -39px;
+    display: none;
+}
+
+@media (max-width: 931px) {
+    .information-text {
+        display: none;
+    }
 }
