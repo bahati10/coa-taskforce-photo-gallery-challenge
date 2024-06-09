@@ -2,19 +2,27 @@
 
 Hosted Version Link:[Photo Gallery](https://coa-taskforce-photo-gallery-challenge.vercel.app/)
 
-Here's a breakdown of how you might implement an interactive photo gallery based on the provided Figma designs, incorporating the best aspects of the approaches:
+Here's a breakdown of how you might implement an interactive photo gallery based on
+the provided Figma designs, incorporating the best aspects of the approaches:
 
 ## Approach
 
 ### HTML Structure
 
-The HTML structure is simple and clean, consisting of a main container element that holds individual gallery items. Each gallery item includes:
+The HTML structure is simple and clean, consisting of a main container 
+element that holds individual gallery items. Each gallery item includes:
 
 - An image element to display the picture.
-- A wrapper element for the information overlay, which contains: - The name of the species. - The location where the species can be found. - A "know more" link.
+
+- A wrapper element for the information overlay, which contains: 
+      - The name of the species. 
+      - The location where the species can be found. 
+      - A **know more** link.
+
   **Example:**
 
-````html
+```
+html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,27 +46,32 @@ The HTML structure is simple and clean, consisting of a main container element t
         </div>
       </div>
     </main>
-    ``` ## CSS Styling The CSS is responsible for styling the gallery layout,
-    individual gallery items, and the hover effects. Key points include: The
-    main container is styled using flexbox or grid to ensure a responsive layout
-    that adapts to different screen sizes. Gallery items are positioned and
-    sized appropriately to maintain a uniform look. Hover effects are
-    implemented using CSS transitions to provide smooth visual feedback. For
-    example, on hover, the image might scale up slightly, apply agrayscale
-    filter, and blur, while the information overlay becomes visible. Media
-    queries are used to adjust the layout and styles for different screen sizes,
-    ensuring the gallery is mobile-friendly. ## JavaScript Functionality
-    JavaScript is used to add interactivity to the gallery. The main tasks
-    handled by JavaScript include: Adding event listeners to each gallery item
-    to handle hover events. On hover, JavaScript changes the styles of the image
-    and the information overlay dynamically to show or hide elements and apply
-    effects. The script ensures that the hover effects are applied correctly,
-    including the transition of the image filter and the visibility of the
-    information overlay. By combining these elements, I achieve a photo gallery
-    that not only displays images but also provides additional contextual
-    information in an engaging and interactive manner. The use of CSS for visual
-    effects and JavaScript for interactivity ensures a smooth and responsive
-    user experience.
-  </body>
-</html>
-````
+```
+
+## CSS
+Styling The CSS is responsible for styling the gallery layout, individual 
+gallery items, and the hover effects. Key points include: 
+
+1. The main container is styled using a flexbox to ensure a responsive layout
+that adapts to different screen sizes. 
+2. Gallery items are positioned and sized appropriately to maintain a uniform look. 
+3. Hover effects are implemented using CSS transitions to provide smooth visual feedback. For
+example, on hover, the image might scale up slightly, apply a grayscale
+filter, and blur, while the information overlay becomes visible. 
+4. Media queries are used to adjust the layout and styles for different screen sizes,
+ensuring the gallery is mobile-friendly. 
+## JavaScript Functionality
+
+JavaScript is used to add interactivity to the gallery. The main tasks handled by JavaScript include: 
+
+1. Adding event listeners to each gallery item to handle hover events. 
+2. On hover, JavaScript changes the styles of the image, and the information overlays dynamically to show or hide elements and apply effects.
+3. The script ensures that the hover effects are applied correctly,
+including the transition of the image filter and the visibility of the information overlay. 
+
+
+By combining these elements, I achieve a photo gallery
+that not only displays images but also provides additional contextual
+information in an engaging and interactive manner. The use of CSS for visual
+effects and JavaScript for interactivity ensures a smooth and responsive
+user experience.
